@@ -1,10 +1,10 @@
 <template>
   <li>
-    <span>
-      <input type="checkbox" />
+    <span v-bind:class="{done: todo.complated}">
+      <input type="checkbox" v-on:change="todo.complated = !todo.complated" />
       <strong>{{todo.id}}</strong>
       {{todo.title}}
-      <button class="rm">&times;</button>
+      <button class="rm" v-on:click="$emit('remove-todo', todo.id)">&times;</button>
     </span>
   </li>
 </template>

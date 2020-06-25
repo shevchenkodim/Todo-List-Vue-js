@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <TodoItem v-for="todo of todos" :key=todo v-bind:todo="todo" />
+      <TodoItem v-for="todo of todos" :key="todo" v-bind:todo="todo" />
     </ul>
   </div>
 </template>
@@ -16,3 +16,11 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
